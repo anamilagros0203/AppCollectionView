@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCollectionView.MainPage">
+
+    <CollectionView Margin="25" ItemsSource="{Binding students}"
+                    HeightRequest="500">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Grid RowDefinitions="auto">
+                    <Image Source="{Binding Image}" Grid.Column="0" WidthRequest="50" Grid.Row="1" VerticalOptions="Center"/>
+                    <Label FontSize="20" Grid.Row="1" Text="{Binding Name}"/>
+                    <Label FontSize="20" Grid.Row="2" Text="{Binding LastName}"/>
+                    <Label FontSize="20" Grid.Row="3" Text="{Binding Telephone}"/>
+                </Grid>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView> 
+
+</ContentPage>
